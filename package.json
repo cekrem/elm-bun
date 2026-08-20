@@ -1,0 +1,22 @@
+{
+  "devDependencies": {
+    "@lydell/elm": "0.19.1-14",
+    "@tailwindcss/typography": "^0.5.20",
+    "bun-plugin-tailwind": "^0.1.2",
+    "elm-janitor-apply-patches": "^1.1.0",
+    "elm-review": "^2.13.5",
+    "elm-watch": "^1.2.8",
+    "tailwindcss": "^4.3.2"
+  },
+  "scripts": {
+    "postinstall": "rm -rf elm-stuff && ELM_HOME=elm-home elm-janitor-apply-patches --all --noconsole || echo 'patching failed (non-critical)'",
+    "review": "elm-review",
+    "review:fix": "elm-review --fix"
+  },
+  "trustedDependencies": [
+    "@lydell/elm"
+  ],
+  "overrides": {
+    "brace-expansion": "^1.1.17"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "targets": {
+    "Elm Main": {
+      "inputs": ["src/Main.elm"],
+      "output": "elm-stuff/output.js"
+    }
+  }
+}
+
