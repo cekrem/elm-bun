@@ -1,7 +1,7 @@
 {
   "devDependencies": {
-    "@lydell/elm": "0.19.1-14",
     "@tailwindcss/typography": "^0.5.20",
+    "bun-plugin-elm": "^0.1.0",
     "bun-plugin-tailwind": "^0.1.2",
     "elm-janitor-apply-patches": "^1.1.0",
     "elm-review": "^2.13.5",
@@ -13,9 +13,6 @@
     "review": "elm-review",
     "review:fix": "elm-review --fix"
   },
-  "trustedDependencies": [
-    "@lydell/elm"
-  ],
   "overrides": {
     "brace-expansion": "^1.1.17"
   }

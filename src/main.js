@@ -1,4 +1,4 @@
-import { Elm } from "../elm-stuff/output.js";
+import { Elm } from "../src/Main.elm";
 
 const app = Elm.Main.init({
   node: document.getElementById("elm"),

@@ -2,5 +2,5 @@
 peer = false
 
 [serve.static]
-plugins = ["bun-plugin-tailwind"]
+plugins = ["bun-plugin-tailwind", "bun-plugin-elm"]
 env = "BUN_PUBLIC_*"

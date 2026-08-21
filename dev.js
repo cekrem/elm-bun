@@ -2,11 +2,6 @@ import index from "./public/index.html";
 
 const API_TARGET = "https://your-cors-sensitive-api.io/api";
 
-const elmWatch = Bun.spawn(["bunx", "elm-watch", "hot"], {
-  stdout: null, // don't pollute console when all is a-ok
-  stderr: "inherit",
-});
-
 // Proxy to dodge CORS hassle from localhost (remove or tweak to your liking)
 async function proxyApi(req) {
   const url = new URL(req.url);
@@ -33,11 +28,6 @@ const server = Bun.serve({
     "/api/*": proxyApi,
     "/*": index,
   },
-});
-
-process.on("SIGINT", () => {
-  elmWatch.kill();
-  process.exit(0);
 });
 
 console.log(`dev server running: ${server.url}`);
